@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="handleClick()">Click Here</button>
+</body>
+<script>
+    function handleClick(){
+        alert("button pressed")          //💥output: button pressed(without click on button)
+    }
+    document.querySelector("button").addEventListener("click", handleClick())
+
+    //🚩"addEventListener Events" -- Rules -- V.V.I
+    //👆In addEventListener if we use function reference/function name with parenthesis,
+    //then the function is invoked/called without events occured
+    //(without event occured means without click on button or without hover on button) 
+    //the function automatically executed when the page is load.(👈This approach not good)
+
+    //👇In addEventListener if we use function reference/function name without parenthesis,
+    //then the function is invoked/called when events occured (event occured means click on button or hover on button)/. 
+    //here the function automatically will not executed when the page is load.(👈This approach Best)
+
+    function handleClick(){
+        alert("button pressed")              //💥Output: button pressed (when click on button)
+    }
+    document.querySelector("button").addEventListener("click", handleClick)
+    
+
+    //🚩"Inline Events" -- Rules -- V.V.I
+    //In inline event we must to use function reference with parenthesis so that the function will
+    //can invoked/called when the event is occured and render the result.
+    //In inline event if we use function reference without parenthesis then that function can not 
+    //invoke/called when the event occured and can not render the result.
+
+    //Example1: with parenthesis
+    //<button onclick="handleClick()">Click Here</button>
+    function handleClick(){
+        alert("button pressed")          //💥Output: buuton pressed    
+    }
+
+    //Example2: without parenthesis
+    //<button onclick="handleClick">Click Here</button>
+    function handleClick(){
+        alert("button pressed")          //💥Output: empty    
+    }
+</script>
+</html>

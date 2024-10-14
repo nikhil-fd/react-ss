@@ -1,0 +1,23 @@
+{
+  "name": "sudhakar_sharma_reactjs_bbsr",
+  "version": "1.0.0",
+  "description": "i create a react application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "to",
+    "build",
+    "react",
+    "application"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/standalone": "^7.25.6",
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
